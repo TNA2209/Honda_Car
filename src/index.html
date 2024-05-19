@@ -28,32 +28,86 @@
     <!-- NAVBAR -->
     <header id="header">
       <nav class="navbar navbar-expand-lg">
-        <a href="index.html" class="navbar-brand"
+        <a href="index.html" class="nav-logo navbar-brand no-border"
           ><img src="./img/logo.png" alt="logo" />
         </a>
-        <a href="#">VEHICLES<i class="fa fa-chevron-down"></i></a>
-        <a href="#">SHOPPING TOOLS<i class="fa fa-chevron-down"></i></a>
-        <div class="header-right ml-auto d-flex">
-          <a href="#"><i class="fa fa-map-marker-alt"></i>Dealers</a>
+        <a href="#">VEHICLES<i class="fa fa-chevron-down ml-2"></i></a>
+        <a href="#">SHOPPING TOOLS<i class="fa fa-chevron-down ml-2"></i></a>
+        <div class="header-right ml-auto d-flex align-items-center">
+          <a href="#" class="no-border"
+            ><i class="fa fa-map-marker-alt mr-2"></i>Dealers</a
+          >
           <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="navbar-nav">
               <li class="navbar-item">
-                <a href="#" class="nav-link">Owner</a>
+                <a href="#" class="nav-link no-border">Owner</a>
               </li>
               <li class="navbar-item">
-                <a href="#" class="nav-link">Discover</a>
+                <a href="#" class="nav-link no-border">Discover</a>
               </li>
               <li class="navbar-item">
                 <a href="#" class="nav-link">English</a>
               </li>
               <li class="navbar-item">
-                <a href="#" class="nav-link"><i class="fa fa-search"></i></a>
+                <a href="#" class="nav-link no-border"
+                  ><i class="fa fa-search"></i
+                ></a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+    <section id="vehicles">
+      <section class="container-fluid container--custom" id="vehicle-content">
+        <div class="row vehicle-nav">
+          <div class="col">
+            <nav>
+              <ul>
+                <li class="active"><a href="#" class="no-border">CARS</a></li>
+                <li><a href="#">CROSSOVER & SUVS</a></li>
+                <li><a href="#">MINIVAN & TRUCK</a></li>
+                <li><a href="#">ENVIRONMENTAL</a></li>
+                <li><a href="#">FUTURE</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row" id="vehicle-list">
+          <div class="col-12">
+            <hr size="2" class="line" />
+            <div class="vehicle-title text-center">
+              <h1 class="d-inline">
+                Car <i class="fa fa-dot-circle"></i> <span>Sedans </span>
+              </h1>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 vehicle-product">
+            <div class="vehicle-img">
+              <img src="./img/xe-1.png" alt="img-fluid" />
+              <img src="./img/xe-1-hover.png" alt="img-fluid" />
+            </div>
+            <h2 class="text-center">Sedan</h2>
+            <div class="vehicle-info d-flex justify-content-around">
+              <div class="vehicle-info-left">
+                <h3>$18,840</h3>
+                <p>Staring</p>
+                <p>MSRP</p>
+              </div>
+              <div class="vehicle-info-right">
+                <h3>40/28</h3>
+                <p>Staring</p>
+                <p>MSRP</p>
+              </div>
+            </div>
+            <div class="vehicle-button text-center">
+              <button class="btn btn-vehicle">EXPLORE</button>
+              <button class="btn btn-vehicle-active">BUILD</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

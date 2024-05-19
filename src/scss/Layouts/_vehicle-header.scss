@@ -1,0 +1,73 @@
+#vehicles {
+    background-color: $color-blue-overlay;
+
+    .container--custom {
+        padding: 0 $pd-7;
+    }
+
+    #vehicle-content {
+
+        .vehicle-nav {
+            background-color: $color-white;
+            text-align: center;
+            padding: $pd-3 0;
+
+            ul {
+                list-style: none;
+                margin: 0;
+
+                li {
+                    display: inline;
+
+                    a {
+                        padding: $pd-1 $pd-4;
+                        font-weight: $font-weight-bold;
+                        color: $color-dark-blue-200;
+                        border-left: $border-2;
+                        font-size: $font-size-1;
+
+                        &:hover {
+                            color: $color-blue-200;
+                        }
+                    }
+                }
+
+                li.active {
+                    a {
+                        color: $color-blue-200;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    #vehicle-list {
+        background-color: $color-grey;
+        padding: $pd-6;
+        .vehicle-title{
+            h1{
+                background-color: $color-grey;
+                position: relative;
+                top: $mg-up-2;
+                padding: 0 $pd-1;
+                color: $color-blue-200;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-3;
+            }
+            i{
+                font-size: $font-size-3 * 0.5;
+                position: relative;
+                top: $mg-up-1;
+            }
+            span{
+                font-weight: normal;
+            }
+        }
+        .vehicle-product{
+            .vehicle-img img:last-child{
+                display: none;
+            }
+        }
+    }
+}

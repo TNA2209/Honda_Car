@@ -1,6 +1,20 @@
- #header{
-    background-color: $color-blue-100;
- }
- #header a{
-    color:$color-white;
- }
+#header {
+   background-color: $color-blue-100;
+   .navbar {
+      padding: 0;
+      a {
+         color: $color-white;
+         padding: $pd-3 $pd-4;
+         border-right: $border-1;
+         border-left: $border-1;
+      }
+
+      .nav-logo{
+         padding: 0;
+      }
+   }
+}
+
+.no-border {
+   border: 0 !important;
+}
