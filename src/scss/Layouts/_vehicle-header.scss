@@ -1,6 +1,7 @@
 #vehicles {
     background-color: $color-blue-overlay;
 
+
     .container--custom {
         padding: 0 $pd-7;
     }
@@ -45,8 +46,11 @@
     #vehicle-list {
         background-color: $color-grey;
         padding: $pd-6;
-        .vehicle-title{
-            h1{
+        padding-bottom: $pd-8;
+        max-height: 100vh;
+        overflow-y: auto; 
+        .vehicle-title {
+            h1 {
                 background-color: $color-grey;
                 position: relative;
                 top: $mg-up-2;
@@ -55,18 +59,68 @@
                 font-weight: $font-weight-bold;
                 font-size: $font-size-3;
             }
-            i{
+
+            i {
                 font-size: $font-size-3 * 0.5;
                 position: relative;
                 top: $mg-up-1;
             }
-            span{
+
+            span {
                 font-weight: normal;
             }
         }
-        .vehicle-product{
-            .vehicle-img img:last-child{
-                display: none;
+
+        .vehicle-product {
+            margin-bottom: $mg-3;
+            .vehicle-img {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .vehicle-img .img-fluid {
+                width: 100%;
+                height: auto;
+            }
+
+            .vehicle-img .hover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            .vehicle-img:hover .hover-img {
+                opacity: 1;
+            }
+
+            .vehicle-img:hover .main-img {
+                opacity: 0;
+            }
+
+
+            h2 {
+                font-size: $font-size-3;
+                font-weight: $font-weight-bold;
+                color: $color-dark-blue-200;
+                margin-bottom: $mg-1;
+            }
+
+            .vehicle-info {
+                margin-bottom: $mg-2;
+                h3 {
+                    font-weight: normal;
+                    font-size: $font-size-2;
+                }
+
+                p {
+                    font-size: $font-size-1;
+                    margin-bottom: $mg-1;
+                }
             }
         }
     }

@@ -18,10 +18,6 @@ const paths = {
     src: "src/scss/**/*.scss",
     dest: "dist/css/",
   },
-  // images: {
-  //   src: "src/img/**/*",
-  //   dest: "dist/img/",
-  // },
   scripts: {
     src: "src/js/**/*.js",
     dest: "dist/js/",
@@ -48,16 +44,11 @@ function styles() {
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
-// function images() {
-//   return gulp
-//     .src(paths.images.src)
-//     .pipe(gulp.dest(paths.images.dest))
-//     .pipe(browserSync.stream());  
-// }
+
 // Task Scripts
 function scripts() {
   return gulp
-    .src(paths.scripts.src)
+    .src(paths.scripts.src, { allowEmpty: true })
     .pipe(sourcemaps.init())
     .pipe(concat("main.js"))
     .pipe(uglify())
@@ -75,7 +66,6 @@ function watch() {
   });
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.styles.src, styles);
-  // gulp.watch(paths.images.src, images);
   gulp.watch(paths.scripts.src, scripts);
 }
 
@@ -85,7 +75,6 @@ const build = gulp.series(gulp.parallel(html, styles, scripts), watch);
 // Xuất các task để có thể chạy bằng dòng lệnh
 exports.html = html;
 exports.styles = styles;
-// exports.images = images;
 exports.scripts = scripts;
 exports.watch = watch;
 exports.build = build;
